@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Slots</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+      .card-aviso {
+        width: 80%;
+        height: 120px;
+        background-color: #1111118f;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin: auto;
+        box-shadow: 0 6px 15px #0000005c;
+      }
+  
+      .card-aviso img {
+        max-width: 100px;
+        height: auto;
+        margin: 10px;
+      }
+
+
+      .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      background-color: #081f27;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: orange;
+    }
+
+    .telegram-grupo {
+      max-width: 200px;
+      height: auto;
+      margin: auto;
+      margin-top: 40px;
+    }
+
+
+    .random-value {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+      color: lime;
+    }
+
+    @media (max-width: 375px) {
+      #popup-button1 {
+        max-width: 80px;
+      }
+
+      #popup-button2 {
+        max-width: 80px;
+      }
+    }
+
+    @media (max-width: 322px) {
+      #popup-button1 {
+        max-width: 60px;
+      }
+
+      #popup-button2 {
+        max-width: 60px;
+      }
+    }
+    </style>
+
+</head>
+<body>
+  
+    <!-- Play Movie Container starts -->
+    <div class="play-container container" style="min-height: 100px;">
+      <img src="images/logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 200px;">
+
+      <div class="card-aviso">
+        <h4>Instale nosso aplicativo:</h4>
+        <img src="images/ios-safari.png" alt="Ícone App Store" id="popup-button1">
+        <img src="images/android.png" alt="Ícone Google Play" id="popup-button2">
+      </div>
+
+      <div class="popup-overlay" id="popup-overlay1">
+        <div class="popup-content">
+          <h3>Siga o PASSO A PASSO:</h3>
+          <img src="images/ios-tutorial.jpg">
+          <span class="popup-close" onclick="closePopup(1)">&times;</span>
+        </div>
+      </div>
+
+      <div class="popup-overlay" id="popup-overlay2">
+        <div class="popup-content">
+          <h3>Siga o PASSO A PASSO:</h3>
+          <img src="images/android-tutorial.jpg">
+          <span class="popup-close" onclick="closePopup(2)">&times;</span>
+        </div>
+      </div>
+        
+        <br><br>
+        <h2 class="outros">HACKS <b style="color: orange;">DISPONÍVEIS:</b></h2> <b></b>
+         </div>
+        
+
+         <div class="container-alt">
+          
+          <div class="card">
+            <a href="fortunetiger.html"><img src="images/tiger.jpg" alt="Imagem 1"></a>
+          </div>
+          <div class="card">
+            <a href="fortuneox.html"><img src="images/ox.jpg" alt="Imagem 2"></a>
+          </div>
+          <div class="card">
+            <a href="fortunemouse.html"><img src="images/mouse.jpg" alt="Imagem 3"></a>
+          </div>
+          
+        </div>
+        
+        <div class="random-value"></div>
+        
+        
+        
+    <!-- Play Movie Container ends -->
+  
+
+    <!--    Início Telegram Grupo
+    <div class="telegram-grupo">
+      <img src="images/grupotelegram.png" alt="Imagem Exemplo">
+    </div>
+    -->
+
+    <!-- Copyright starts -->
+        <div class="copyright">
+
+        <p>&#169; Hack Slots. Todos os Direitos Reservados!</p>
+    </div>
+
+
+    <!-- Copyright ends -->
+
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="https://kit.fontawesome.com/SEU_CODIGO_DO_KIT.js" crossorigin="anonymous"></script>
+
+    <script>
+      function openPopup(popupId) {
+        var popupOverlay = document.getElementById('popup-overlay' + popupId);
+        popupOverlay.style.display = 'block';
+      }
+  
+      function closePopup(popupId) {
+        var popupOverlay = document.getElementById('popup-overlay' + popupId);
+        popupOverlay.style.display = 'none';
+      }
+  
+      var popupButton1 = document.getElementById('popup-button1');
+      var popupButton2 = document.getElementById('popup-button2');
+  
+      popupButton1.addEventListener('click', function() {
+        openPopup(1);
+      });
+  
+      popupButton2.addEventListener('click', function() {
+        openPopup(2);
+      });
+    </script>
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var randomValueElement = document.querySelector('.random-value');
+        var randomValue = (Math.random() * (99.99 - 98.90) + 98.90).toFixed(2);
+        randomValueElement.textContent = "Chance de lucro: "+ randomValue + '%';
+      });
+    </script>
+
+</body>
+</html>
